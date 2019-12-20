@@ -1,20 +1,33 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Row from "./components/Row"
 
+ function getTestDistrictData() {
+  let response = [
+          {
+            "welcome":[
+              {
+                "headerName": "Здравствуйте",
+                "delimiter":",",
+                "text": "Покупатель Покупателевич",
+              }
+            ]
+          }
+        ];
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(response);
+    }, 1000);
+  });
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="image/fulogy.png"/>
-        <p>PP</p>
-      </header>
-      <body className="App-body">
-        2
-      </body>
-      <footer className="App-footer">
-        3
-      </footer>
+      <Row headerName = "ХЭДЕР"
+           delimiter = "-"
+           infoText = "Какаято посылка"
+           otherText = "Еще"/>
     </div>
   );
 }
