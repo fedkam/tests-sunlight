@@ -2,9 +2,9 @@ import React from 'react';
 
 const Row = (props) => {
   let {
-    headerName = "",
+    headerName,
     delimiter = ":",
-    infoText = "",
+    infoText,
     otherText
   } = props;
 
@@ -13,6 +13,6 @@ const Row = (props) => {
         <p>{headerName} {delimiter} {infoText} {otherText}</p>
       </div>
   );
-}
+};
 
 export default Row;

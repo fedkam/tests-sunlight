@@ -9,3 +9,7 @@ html{
 .App {
   padding: 40vh;
 }
+
+.group-header {
+  font-weight: bold;
+}
