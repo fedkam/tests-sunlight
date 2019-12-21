@@ -2,21 +2,25 @@ import React from 'react';
 import Row from "../../components/Row";
 
 const CreateGroup = (props) => {
-  let {
-    groupData
-  } = props;
+  let {groupData} = props;
 
-  console.log("groupData=",groupData);
+  const listData = groupData.listData.map((row, index) =>
+    <Row headerName = {row.headerName}
+         delimiter = {row.delimiter}
+         infoText = {row.infoText}
+         otherText = {row.otherText}
+         key={index}
+    />
+  );
 
   return(
       <div>
         { groupData.groupHeader && (
-           <Row headerName = {groupData.groupHeader}
-                delimiter = ":"
-        />)}
-        <Row headerName = {groupData.listData[0].headerName}
-             infoText = {groupData.listData[0].infoText}
-        />
+           <Row className = "group-header"
+                headerName = {groupData.groupHeader}
+           />
+        )}
+        {listData}
       </div>
   );
 };

@@ -10,7 +10,7 @@ const Row = (props) => {
 
   return(
       <div>
-        <p>{headerName} {delimiter} {infoText} {otherText}</p>
+        <p>{headerName}{delimiter} {infoText} {otherText}</p>
       </div>
   );
 };
