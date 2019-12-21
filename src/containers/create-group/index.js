@@ -15,10 +15,11 @@ const CreateGroup = (props) => {
 
   return(
       <div>
+        <br/>
         { groupData.groupHeader && (
-           <Row className = "group-header"
-                headerName = {groupData.groupHeader}
-           />
+          <div className = "group-header">
+            <Row headerName = {groupData.groupHeader}/>
+          </div>
         )}
         {listData}
       </div>

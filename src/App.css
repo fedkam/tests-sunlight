@@ -7,9 +7,14 @@ html{
 }
 
 .App {
-  padding: 40vh;
+  padding: 0 40vh;
 }
 
 .group-header {
   font-weight: bold;
+}
+
+p {
+  line-height: 100%;
+  margin: .3em;
 }
